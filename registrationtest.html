@@ -1,0 +1,110 @@
+<html>
+<head>
+<title>REGISTRATION</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="bootstrap/bootstrap.min.css" 
+<html>
+    <head>
+        <head>
+            <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+            <script src="bootstrap/bootstrap.bundle.min.js"></script>
+        </head>
+  <script language="javascript">
+            function validate()
+            {
+                var firstname=document.getElementById("t1").value;
+                var email=document.getElementById("t2").value;                
+                var emsg="";
+                if (firstname.length==0)
+                    emsg+="Enter firstname<br/>";
+                if (email.length==0)
+                    emsg+="Enter email";
+                if (emsg.length>0)
+                    {
+                        document.getElementById("error").innerHTML=emsg;
+                        return false;
+                    }
+                else    
+                    {
+                     alert("Registration Successfull!");     
+                   return true;
+                    }
+      
+     
+
+           }
+
+      </script>
+    </head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<a class="navbar-brand" href="#">FOOD ITEMS</a>
+ <div class="collapse navbar-collapse"
+>
+ <ul class="navbar-nav mr-auto">
+ <li class="nav-item"><a class="nav-link" href="pizza.html">PIZZA</a></li>  
+ <li class="nav-item"><a class="nav-link" href="burger.html">BURGER</a></li>
+ <li class="nav-item"><a class="nav-link" href="wrapes.html">WRAPES</a></li>  
+ <li class="nav-item"><a class="nav-link" href="registrationtest.html">REGISTRATION</a></li>  
+
+</div>
+</nav>
+
+<div class="container mt-3">
+<div class="row">
+<form onsubmit="return validate()">
+<div class="card col-sm-6">
+<div class="card-header bg-black text-light">REGISTRATION</div>
+<div class="card-body">
+<div class="row">
+<div class="col-sm-4">
+<label>FIRST NAME:</label>
+<input type="text" name="t1" ID="t1" placeholder="Enter FirstName" class="form-control" />
+</div>
+</div>
+<div class="row">
+<div class="col-sm-4">
+<label>EMAIL:</label>
+<input type="email" name="t2" ID="t2" placeholder="Enter Email" class="form-control" />
+</div>
+</div>
+<div class="row">
+<div class="col-sm-5">
+<label>GENDER:</label>
+<input type="radio" name="r1" class="form-check-input" >Male
+<input type="radio" name="r1" class="form-check-input">Female
+<input type="radio" name="r1" class="form-check-input">others
+</div>
+</div>
+<div class="row">
+<div class="col-sm-5">
+<label>COURSES:</label>
+<input type="checkbox" name="c1">BCA
+<input type="checkbox" name="c1">BBA
+<input type="checkbox" name="c1">B.TECH
+</div>
+</div>
+<div class="row">
+<div class="col-sm-4">
+<label>STATE":</label>
+<select class="form-select">
+<option>Surat</option>
+<option>Mumbai</option>
+<option>Kolkata</option>
+<option>Chennai</option>
+<option>Bengaluru</option>
+</select>
+</div>
+</div>
+<div class="row m-3">
+<div id="error" style="color: red;"></div>
+</div>        
+<div class="row">
+<div class="col-sm-4">
+<input type="SUBMIT" class="btn btn-dark" value="submit" />
+</div>
+</div>
+</div>
+</div>
+</form>   
+</div>
